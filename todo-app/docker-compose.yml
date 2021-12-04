@@ -1,0 +1,87 @@
+version: "3.3"
+services:
+  front-balancer:
+    build: ./../loadbalancer/frontend/
+    ports:
+      - "6000:80"
+    depends_on:
+      - front1
+      - front2
+      - front3
+      - front4
+      - front5
+      - front6
+      - front7
+      - front8
+      - front9
+      - front10
+  front1:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6001:80"
+  front2:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6002:80"
+  front3:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6003:80"
+  front4:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6004:80"
+  front5:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6005:80"
+  front6:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6006:80"
+  front7:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6007:80"
+  front8:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6008:80"
+  front9:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6009:80"
+  front10:
+    build:
+      context: ./
+      args:
+        - LINK=
+    ports:
+      - "6010:80"
